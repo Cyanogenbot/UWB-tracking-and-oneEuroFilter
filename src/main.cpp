@@ -29,9 +29,6 @@ void setup() {
 }
 
 
-
-
-
 void loop() {
   // check if data is available
   // delay(100);
@@ -75,6 +72,7 @@ void loop() {
 
       int xcorf = euro.filter(time, xcori);
       int ycorf = euro.filter(time, ycori);
+      int zcorf = euro.filter(time, zcori);
 
 
       if (xcori != 0 ){
@@ -86,18 +84,13 @@ void loop() {
         // String closest = message.substring(openingProx, closingProx);   //captures first data String
 
         oocsi.newMessage("proxchannel");
-        oocsi.addInt("xcor",xcori);
-        oocsi.addInt("ycor",ycori);
-        oocsi.addInt("zcor",zcori);
+        oocsi.addInt("xcor",xcorf);
+        oocsi.addInt("ycor",ycorf);
+        oocsi.addInt("zcor",zcorf);
         oocsi.sendMessage();
         oocsi.printSendMessage();
 
       }
-
-
-
-
-      // else{analogWrite(LEDB, 0);}
 
       
     }
