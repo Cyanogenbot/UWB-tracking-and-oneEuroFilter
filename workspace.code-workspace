@@ -1,0 +1,12 @@
+{
+    "folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "receiving end",
+			"path": "..\\receiving end"
+		}
+	],
+    "settings": {}
+}
